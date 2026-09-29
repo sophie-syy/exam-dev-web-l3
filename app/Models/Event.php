@@ -18,4 +18,9 @@ class Event extends Model
             'event_date' => 'date',
         ];
     }
+
+    public function tag()
+    {
+        return $this->belongsToMany(Tag::class);
+    }
 }

@@ -1,0 +1,17 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Tag extends Model
+{
+    protected $fillable = [
+        'nom'
+    ];
+
+    public function event()
+    {
+        return $this->belongsToMany(Event::class);
+    }
+}
