@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="/css/app.css">
 </head>
 <body>
-    <form action="/ajouter" method="post">
-        <input type="hidden" name="confirm" value="yes">
+    <form action="{{ url('ajouter') }}" method="post">
+        @csrf
         <button>page ajouter</button>
     </form>
 

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/css/app.css">
 </head>
 <body>
+    <h2>Ajouter</h2>
     <form action="/ajouter" method="post">
         @csrf
         <label for="title">titre</label><br>
@@ -22,7 +23,7 @@
         <label for="location">lieu</label><br>
         <input type="text" id="location"><br>
 
-        <input type="submit" value="Submit">
+        <input type="submit" value="Valider">
     </form>
 </body>
 </html>

@@ -22,13 +22,31 @@ class CreateController extends Controller
         ]);
         
         if ($validator->fails()) {
-            return redirect('/post/create')
+            return redirect('/ajouter')
                 ->withErrors($validator)
                 ->withInput();
         }
 
- 
+        
+
         return redirect('/ajouter');
     }
 
+    public function modifier(Request $request)
+    {
+        $validator = Validator::make($request->all(), [
+            'title' => 'required|string|max:150',
+            'description' => 'required',
+            'event_date' => 'required|date',
+            'location' => 'required|string|max:150|nullabe',
+        ]);
+        
+        if ($validator->fails()) {
+            return redirect('/ajouter')
+                ->withErrors($validator)
+                ->withInput();
+        }
+
+        
+    }
 }
